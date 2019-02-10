@@ -10,13 +10,12 @@ Public Class MainForm
 
     End Sub
 
-    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
-        Label1.Text = GetCurrentTime(False)
-    End Sub
     Private Function GetCurrentTime(Optional ByVal IncludeSeconds As Boolean = True) As String
         Return Format(Now, "hh:mm")
 
     End Function
 
-
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Label1.Text = GetCurrentTime(False)
+    End Sub
 End Class
