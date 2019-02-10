@@ -1,7 +1,7 @@
-Public Class Form1
+Public Class MainForm
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TextBox1.Text = "yo-yo"
-        TextBox2.Text = 7 + 3
+        TextBox2.Text = 774 + 3
 
     End Sub
 
@@ -9,4 +9,14 @@ Public Class Form1
         Finalize()
 
     End Sub
+
+    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
+        Label1.Text = GetCurrentTime(False)
+    End Sub
+    Private Function GetCurrentTime(Optional ByVal IncludeSeconds As Boolean = True) As String
+        Return Format(Now, "hh:mm")
+
+    End Function
+
+
 End Class
