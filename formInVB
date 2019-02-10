@@ -11,8 +11,11 @@ Public Class MainForm
     End Sub
 
     Private Function GetCurrentTime(Optional ByVal IncludeSeconds As Boolean = True) As String
-        Return Format(Now, "hh:mm")
-
+        If IncludeSeconds = False Then
+            Return Format(Now, "hh:mm")
+        Else
+            Return Format(Now, "hh:mm:ss")
+        End If
     End Function
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
